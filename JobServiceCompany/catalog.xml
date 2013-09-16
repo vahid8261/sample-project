@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/University/TranscriptService?wsdl" uri="src/conf/xml-resources/web-service-references/TranscriptService/wsdl/localhost_8080/University/TranscriptService.wsdl"/>
+    <system systemId="http://localhost:8080/University/TranscriptService?xsd=1" uri="src/conf/xml-resources/web-service-references/TranscriptService/wsdl/localhost_8080/University/TranscriptService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/EmploymentOffice/EmploymentRecordService?wsdl" uri="src/conf/xml-resources/web-service-references/EmploymentRecordService/wsdl/localhost_8080/EmploymentOffice/EmploymentRecordService.wsdl"/>
+    <system systemId="http://localhost:8080/EmploymentOffice/EmploymentRecordService?xsd=1" uri="src/conf/xml-resources/web-service-references/EmploymentRecordService/wsdl/localhost_8080/EmploymentOffice/EmploymentRecordService.xsd_1.xsd"/>
+    <system systemId="http://localhost:8084/CompaniesDatabase/CompanyInfo?wsdl" uri="src/conf/xml-resources/web-service-references/CompanyInfo_1/wsdl/localhost_8084/CompaniesDatabase/CompanyInfo.wsdl"/>
+    <system systemId="http://localhost:8084/CompaniesDatabase/CompanyInfo?xsd=1" uri="src/conf/xml-resources/web-service-references/CompanyInfo_1/wsdl/localhost_8084/CompaniesDatabase/CompanyInfo.xsd_1.xsd"/>
+    <system systemId="http://localhost:8080/JobServiceCompany/JobDescriptionService?wsdl" uri="src/conf/xml-resources/web-service-references/JobDescriptionService/wsdl/localhost_8080/JobServiceCompany/JobDescriptionService.wsdl"/>
+    <system systemId="http://localhost:8080/JobServiceCompany/JobDescriptionService?xsd=1" uri="src/conf/xml-resources/web-service-references/JobDescriptionService/wsdl/localhost_8080/JobServiceCompany/JobDescriptionService.xsd_1.xsd"/>
+</catalog>
+
+
+
+
+

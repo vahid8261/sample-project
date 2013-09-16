@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cns:company xsi:schemaLocation="http://xml.netbeans.org/schema/ComanySchema Company.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:cns="http://xml.netbeans.org/schema/ComanySchema">
+	<cns:name>IBM</cns:name>
+	<cns:address>Kista</cns:address>
+	<cns:noemploees>1000</cns:noemploees>
+</cns:company>

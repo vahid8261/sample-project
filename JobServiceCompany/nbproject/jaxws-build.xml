@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?><!--
+        *** GENERATED FROM jax-ws.xml - DO NOT EDIT !                             ***
+        *** TO MODIFY wsimport options USE Web Service node -> Edit WS Attributes ***
+        *** TO CHANGE TARGETS GENERATED TO jaxws-build.xml COPY THOSE             ***
+        *** TARGETS TO ../build.xml AND MODIFY THAT FILE INSTEAD                  ***
+
+        --><project xmlns:xalan="http://xml.apache.org/xslt" xmlns:webproject2="http://www.netbeans.org/ns/web-project/2" xmlns:jaxws="http://www.netbeans.org/ns/jax-ws/1">
+    <!--
+                ===================
+                JAX-WS WSGEN SECTION
+                ===================
+            -->
+    <target name="wsgen-init" depends="init, -do-compile">
+        <mkdir dir="${build.generated.sources.dir}/jax-ws/resources/"/>
+        <mkdir dir="${build.classes.dir}"/>
+        <mkdir dir="${build.classes.dir}/META-INF"/>
+        <property name="j2ee.platform.wsgen.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsgen" classname="com.sun.tools.ws.ant.WsGen">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </taskdef>
+    </target>
+    <target name="wsgen-CV" depends="wsgen-init">
+        <copy todir="${build.classes.dir}/META-INF">
+            <fileset dir="${webinf.dir}" includes="wsit-services.CV.xml"/>
+        </copy>
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="services.CV" xendorsed="true">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <target name="wsgen-JobDescription" depends="wsgen-init">
+        <copy todir="${build.classes.dir}/META-INF">
+            <fileset dir="${webinf.dir}" includes="wsit-services.JobDescription.xml"/>
+        </copy>
+        <wsgen sourcedestdir="${build.generated.sources.dir}/jax-ws" resourcedestdir="${build.generated.sources.dir}/jax-ws/resources/" destdir="${build.generated.sources.dir}/jax-ws" verbose="true" keep="true" genwsdl="true" sei="services.JobDescription" xendorsed="true">
+            <classpath path="${java.home}/../lib/tools.jar:${build.classes.dir}:${j2ee.platform.wsgen.classpath}:${javac.classpath}"/>
+        </wsgen>
+    </target>
+    <!--
+                ===================
+                JAX-WS WSIMPORT SECTION
+                ===================
+            -->
+    <target name="wsimport-init" depends="init">
+        <fail if="${wsimport.bad.version}" message="WsImport ant task defined in the classpath ${j2ee.platform.wsimport.classpath} has a serious bug. See http://wiki.netbeans.org/MetroIssue for details."/>
+        <mkdir dir="${build.generated.sources.dir}/jax-ws"/>
+        <property name="j2ee.platform.wsimport.classpath" value="${libs.jaxws21.classpath}"/>
+        <taskdef name="wsimport" classname="com.sun.tools.ws.ant.WsImport">
+            <classpath path="${java.home}/../lib/tools.jar:${j2ee.platform.wsimport.classpath}:${javac.classpath}"/>
+        </taskdef>
+        <condition property="conf-dir" value="${conf.dir}/" else="">
+            <isset property="conf.dir"/>
+        </condition>
+    </target>
+    <target name="wsimport-client-TranscriptService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/TranscriptService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/TranscriptService" destdir="${build.generated.dir}/jax-wsCache/TranscriptService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/TranscriptService/wsdl/localhost_8080/University/TranscriptService.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" wsdlLocation="http://localhost:8080/University/TranscriptService?wsdl" xnocompile="true" xendorsed="true" package="university">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/TranscriptService/wsdl/localhost_8080/University/TranscriptService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/TranscriptService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/TranscriptService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-TranscriptService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/university"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/TranscriptService"/>
+    </target>
+    <target name="wsimport-client-EmploymentRecordService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/EmploymentRecordService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/EmploymentRecordService" destdir="${build.generated.dir}/jax-wsCache/EmploymentRecordService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/EmploymentRecordService/wsdl/localhost_8080/EmploymentOffice/EmploymentRecordService.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" wsdlLocation="http://localhost:8080/EmploymentOffice/EmploymentRecordService?wsdl" xnocompile="true" xendorsed="true" package="employment">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/EmploymentRecordService/wsdl/localhost_8080/EmploymentOffice/EmploymentRecordService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/EmploymentRecordService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/EmploymentRecordService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-EmploymentRecordService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/employment"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/EmploymentRecordService"/>
+    </target>
+    <target name="wsimport-client-CompanyInfo" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CompanyInfo"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CompanyInfo" destdir="${build.generated.dir}/jax-wsCache/CompanyInfo" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/CompanyInfo/wsdl/localhost_8084/CompaniesDatabase/CompanyInfo.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" wsdlLocation="http://localhost:8084/CompaniesDatabase/CompanyInfo?wsdl" xnocompile="true" xendorsed="true" package="company">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/CompanyInfo/wsdl/localhost_8084/CompaniesDatabase/CompanyInfo.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CompanyInfo"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CompanyInfo">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CompanyInfo" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/company"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/CompanyInfo"/>
+    </target>
+    <target name="wsimport-client-CompanyInfo_1" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/CompanyInfo_1"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/CompanyInfo_1" destdir="${build.generated.dir}/jax-wsCache/CompanyInfo_1" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/CompanyInfo_1/wsdl/localhost_8084/CompaniesDatabase/CompanyInfo.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" wsdlLocation="http://localhost:8084/CompaniesDatabase/CompanyInfo?wsdl" xnocompile="true" xendorsed="true" package="companies">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/CompanyInfo_1/wsdl/localhost_8084/CompaniesDatabase/CompanyInfo.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/CompanyInfo_1"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/CompanyInfo_1">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-CompanyInfo_1" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/companies"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/CompanyInfo_1"/>
+    </target>
+    <target name="wsimport-client-JobDescriptionService" depends="wsimport-init">
+        <mkdir dir="${build.generated.dir}/jax-wsCache/JobDescriptionService"/>
+        <wsimport sourcedestdir="${build.generated.dir}/jax-wsCache/JobDescriptionService" destdir="${build.generated.dir}/jax-wsCache/JobDescriptionService" wsdl="${basedir}/${conf-dir}xml-resources/web-service-references/JobDescriptionService/wsdl/localhost_8080/JobServiceCompany/JobDescriptionService.wsdl" catalog="catalog.xml" encoding="${source.encoding}" extension="true" verbose="true" wsdlLocation="http://localhost:8080/JobServiceCompany/JobDescriptionService?wsdl" xnocompile="true" xendorsed="true" package="jobdescription">
+            <depends file="${basedir}/${conf-dir}xml-resources/web-service-references/JobDescriptionService/wsdl/localhost_8080/JobServiceCompany/JobDescriptionService.wsdl"/>
+            <produces dir="${build.generated.dir}/jax-wsCache/JobDescriptionService"/>
+        </wsimport>
+        <copy todir="${build.generated.sources.dir}/jax-ws">
+            <fileset dir="${build.generated.dir}/jax-wsCache/JobDescriptionService">
+                <include name="**/*.java"/>
+            </fileset>
+        </copy>
+    </target>
+    <target name="wsimport-client-clean-JobDescriptionService" depends="-init-project">
+        <delete dir="${build.generated.sources.dir}/jax-ws/jobdescription"/>
+        <delete dir="${build.generated.dir}/jax-wsCache/JobDescriptionService"/>
+    </target>
+    <target name="wsimport-client-generate" depends="wsimport-client-TranscriptService, wsimport-client-EmploymentRecordService, wsimport-client-CompanyInfo, wsimport-client-CompanyInfo_1, wsimport-client-JobDescriptionService"/>
+</project>

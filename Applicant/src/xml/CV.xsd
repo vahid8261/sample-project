@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:cvns="http://xml.netbeans.org/schema/CVSchema" targetNamespace="http://xml.netbeans.org/schema/CVSchema" elementFormDefault="qualified">
+	<xsd:element name="cv">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="name" type="xsd:string"/>
+				<xsd:element name="licenseid" type="xsd:int"/>
+				<xsd:element name="hobbies">
+					<xsd:complexType>
+						<xsd:sequence>
+							<xsd:element name="hobby" minOccurs="1" maxOccurs="unbounded" type="xsd:string" />
+						</xsd:sequence>
+					</xsd:complexType>
+				</xsd:element>
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>
